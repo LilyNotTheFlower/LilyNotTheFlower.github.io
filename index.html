@@ -4,20 +4,30 @@
 
 <style type="text/css">
 	
+	.plant{
+		
+	}
 	.bookr1{
-		width:100px;
+		width:80px;
 		height:300px;
-		background-color:seagreen;
+		margin:0px;
+/*		background-color:seagreen;*/
 		display:inline-block;
 		position:relative;
 		top:100px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center;
 /*		border:1px solid black;*/
 	}
 
 	#leaningr1{
 		width:100px;
 		height:300px;
-		background-color:darkred;
+		background-image:url(harryPotter1.png);
+		background-size:contain;
+		background-repeat:no-repeat;
+		background-position:center;
 		display:inline-block;
 		transform:rotate(320deg);
 		position:absolute;
@@ -55,32 +65,61 @@ margin-top:10px;
 	body{
 		margin:0px;
 	}
+
+	#hp1{
+		background-image:url(harryPotter1.png);
+	}
+
+	#hp2{
+		background-image:url(harryPotter1.png);
+	}
+	#hp3{
+		background-image:url(harryPotter1.png);
+	}
+	#hp4{
+		background-image:url(harryPotter1.png);
+	}
+
+	#ground{
+		width:100%;
+		height:50px;
+		background-color: blueviolet;
+	}
 </style>
 
 </head>
 <body>
 
-	<a href="journal.html">journal</a>
-<a href="projects.html">projects</a> 
+	
+
+
+
+
+
+
 
 <div id="bookshelf">
-<div class="bookr1"></div>
-<div class="bookr1"></div>
-<div class="bookr1"></div>
-<div class="bookr1"></div>
-<div id="leaningr1"></div>
+<div id="plant"></div>
+<div id="hp1" class="bookr1"></div>
+<div id="hp2" class="bookr1"></div>
+<div id="hp3" class="bookr1"></div>
+<div id="hp4" class="bookr1"></div>
+<a href="journal.html">
+	<div id="leaningr1"></div>
+</a>
+<br><br><br><br><br><br>
 
-<br><br><br><br><br><br><br><br>
+<div id="ground"></div>
+<!-- there are line breaks between things -->
+
+
+<a href="projects.html">
 <div class="bookr2"></div>
 <div class="bookr2"></div>
 <div class="bookr2"></div>
 <div class="bookr2"></div>
 <div id="leaningr2"></div>
-<div class="bookr3"></div>
-<div class="bookr3"></div>
-<div class="bookr3"></div>
-<div class="bookr3"></div>
-<div id="leaningr3"></div>
+</a> 
 
 </div>
 </body>
