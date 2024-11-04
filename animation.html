@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		#sky{
+			width:100%;
+			height:100%;
+			background-color:rgb(18,18,18);
+			position:relative;
+		}
+		#comet{
+			width:100px;
+			height:100px;
+			border-radius:50%;
+			background-color:navy;
+			position:absolute;
+
+			animation-name:fly;
+			animation-duration:10s;
+			animation-iteration-count:infinite;
+
+			
+		}
+
+
+		@keyframes fly{
+			0%{
+				left:0px;
+				top:0px;
+				background-color:navy;
+			}
+			10%{
+				background-color:darkblue;
+			}
+			15%{
+				background-color: lightblue;
+			}
+
+			/*20%{
+				background-color:orangered;
+			}*/
+			23%{
+				background-color:darkred;
+			}
+			30%{
+				background-color:orange;
+			}
+			50%{
+				background-color:lightgoldenrodyellow;
+			}
+			60%{
+				background-color: lightyellow;
+			}
+			70%{
+				background-color:floralwhite;
+			}
+
+			100%{
+				left:800px;
+				top:500px;
+				height:0px;
+				width:0px;
+				background-color: floralwhite;
+			}
+		}
+
+		
+	</style>
+</head>
+<body>
+
+<div id="comet"></div>
+<div id="sky"></div>
+
+</body>
+</html>
