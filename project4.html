@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		
+
+		#cardinal{
+			width:100px;
+			height:100px;
+			background-image:url(https://media0.giphy.com/media/3dpG9uWjIOgQwIcLN3/200w.gif?cid=6c09b952ph634ew7q87c0oikr0xtvd56djdfwivm13ynyd41&ep=v1_gifs_search&rid=200w.gif&ct=g);
+			background-size:cover;
+			background-repeat: no-repeat;
+			border-radius:50%;
+			position:absolute;
+/*			transition:.5s;*/
+
+		}
+	</style>
+</head>
+<body>
+
+	<div id="cardinal"></div>
+
+	<script type="text/javascript">
+
+	function move(){
+		console.log(Math.random())
+		cardinal.style.left = Math.random()*500+"px";
+		cardinal.style.top = Math.random()*500+"px";
+
+	}
+	setInterval(move, 2625)
+		</script>
+
+
+</body>
+</html>

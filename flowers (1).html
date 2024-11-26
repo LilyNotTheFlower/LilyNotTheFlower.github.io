@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	
+		body{
+		/*	width:1000px;
+			height:1000px;*/
+			background-color:rosybrown;
+			margin:0;
+		}
+		.flowers{
+			width:150px;
+			height:20px;
+			background-image:url(flower.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			text-align:center;
+			padding-top:80px;
+			position:absolute;
+			text-align:center;
+			background-position: center;
+
+
+		}
+
+		a{
+			text-decoration:none;
+			color:white;
+			font-family:courier;
+		}
+
+		/*#flower1{
+			background-color:blue;
+		}*/
+	</style>
+</head>
+<body>
+	<a href="index.html">back </a>
+<!-- <a href=""></a> -->
+<!-- <div id="background"></div> -->
+	<script type="text/javascript">
+		
+		function makeflowers (input){
+			let flower = document.createElement("div")
+			let link = document.createElement("a")
+			link.href ="project"+input+".html"
+
+			document.body.appendChild(link)
+			link.appendChild(flower)
+			flower.classList.add("flowers")
+			flower.id = "flower"+input
+			// flower.style.backgroundImage="url(flower"+input+".png)"
+			flower.style.left = Math.random()*500+"px"
+			flower.style.top = Math.random()*500+"px"
+
+		}
+
+		for(var i=0; i<5; i=i+1){
+			makeflowers(i)
+		}
+
+		flower0.innerText= "my animation"
+		flower1.innerText= "jumpscare"
+		flower2.innerText= "whatever"
+
+
+	</script>
+
+</body>
+</html>

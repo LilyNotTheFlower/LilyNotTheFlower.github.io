@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.plant{
+			left:500px;
+			width:127px;
+			height:225px;
+/*			display:inline-block;*/
+/*			background-color: darkred;*/
+			background-image:url(vines.png);
+			background-size: contain;
+			background-size:cover ;
+			margin:0px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	let leaf =0;
+
+	function grow(){
+		leaf = leaf+1
+		let stem = document.createElement("div")
+		document.body.appendChild(stem)
+		stem.classList.add("plant")
+	}
+
+	setInterval(grow, 1000)
+
+</script>
+
+</body>
+</html>
