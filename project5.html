@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+		
+		body{
+/*			background-color:rgb();*/
+		}
+
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+	document.addEventListener("click", function(input){	
+		console.log(input.clientX, input.clientY)
+		let r = 10
+		let g = input.clientX
+		let b = input.clientY
+		document.body.style.backgroundColor="rgb("+r + ","+g+","+b+")";
+	})
+	</script>
+
+</body>
+</html>
