@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+	.square{
+		width:100px;
+		height: 100px;
+		margin: 5px;
+		border: solid black 2px;
+		display: inline-block;
+	}
+	#handle{
+		width:20px;
+		height: 100px;
+		margin: 5px;
+		border: solid black 2px;
+		display: inline-block;
+	let money==0
+	</style>
+</head>
+<body>
+
+	<div id="square1" class="square"></div>
+		<div id="square2" class="square"></div>
+			<div id="square3" class="square"></div>
+				<div id="scoreboard">5</div>
+
+			<div id="handle" ></div>
+			<!-- <div id="money" ></div> -->
+
+			<script type="text/javascript">
+				let images = ["mistyrose", "coral", "orange","YellowChiffon","blanchedalmond","red","pink","indianred","salmon"]
+				let gamescore=0
+				let score=5
+				scoreboard.innerText=score
+
+				handle.addEventListener("click", function(){
+
+					let random = Math.floor(Math.random()*10)
+					let random2 = Math.floor(Math.random()*10)
+					let random3 = Math.floor(Math.random()*10)
+					score=score-1
+					if (score==-1){
+						alert("GAME OVER, FINAL SCORE: " + gamescore)
+					}
+					scoreboard.innerText=score
+					gamescore=gamescore+1
+
+					square1.style.backgroundColor = images[random]
+					square2.style.backgroundColor = images[random2]
+					square3.style.backgroundColor = images[random3]
+
+
+					if (random==random2&&random==random3){
+						score=score+5
+					scoreboard.innerText=score
+					}
+
+					else if (random==random3){
+						score=score+2
+					scoreboard.innerText=score
+					}
+
+					else if (random==random2){
+						score=score+2
+					scoreboard.innerText=score
+					}
+
+					
+				})
+
+
+
+
+
+			</script>
+</body>
+</html>

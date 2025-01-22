@@ -43,7 +43,7 @@
 <!-- <a href=""></a> -->
 <!-- <div id="background"></div> -->
 	<script type="text/javascript">
-		
+		let petal = 0;
 		function makeflowers (input){
 			let flower = document.createElement("div")
 			let link = document.createElement("a")
@@ -53,19 +53,30 @@
 			link.appendChild(flower)
 			flower.classList.add("flowers")
 			flower.id = "flower"+input
-			// flower.style.backgroundImage="url(flower"+input+".png)"
-			flower.style.left = Math.random()*500+"px"
-			flower.style.top = Math.random()*500+"px"
+			if(petal>9) {
+				petal=0
+
+			}
+			else{
+				petal=petal+1
+
+			}
+			flower.style.backgroundImage="url(flower"+petal+".png)"
+			flower.style.left = Math.random()*1000+"px"
+			flower.style.top = Math.random()*700+"px"
 
 		}
 
-		for(var i=0; i<5; i=i+1){
+		for(var i=0; i<8; i=i+1){
 			makeflowers(i)
 		}
 
 		flower0.innerText= "my animation"
 		flower1.innerText= "jumpscare"
 		flower2.innerText= "whatever"
+		flower3.innerText= "growing plant"
+		flower4.innerText= "hopping cardinal"
+		flower5.innerText= "broken colorchanging block"
 
 
 	</script>

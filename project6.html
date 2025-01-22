@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title></title>
+		<style type="text/css">
+			#box{
+				width:200px;
+				height:200px;
+				background-color: lightblue;
+			}
+
+		</style>
+</head>
+<body>
+
+	<audio id="sound" src='audioFile.m4a'></audio>
+<div id="box"></div>
+	<script type="text/javascript">
+		let lightswitch = true;
+
+		box.addEventListener("click", function(){
+
+			if (lightswitch==true){
+
+				//since the variable lightswitch is true when the box is clicked, it plays. Then the if turns it false so it will stop playing once it is done.
+				sound.play()
+				lightswitch=false}
+
+			else if(lightswitch==false){sound.pause()lightswitch=true}
+			
+			// alert("unpack?")
+		})
+
+	</script>
+
+</body>
+</html>
