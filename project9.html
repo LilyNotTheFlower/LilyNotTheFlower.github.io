@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		.confetti{
+			width:20px;
+			height:20px;
+			margin: 5px;
+			background-color: blueviolet;
+			position:absolute;
+		}
+		a{
+			text-decoration:none;
+			color:black;
+			font-family:courier;
+		}
+	</style>
+</head>
+<body>
+	<a href="flowers.html">back </a>
+	<script type="text/javascript">
+		function makeConfetti(x){
+			let confetti = document.createElement("div")
+			document.body.appendChild(confetti)
+			confetti.classList.add("confetti")
+
+			confetti.style.left = Math.random()*1000+"px"
+			confetti.style.top = Math.random()*1000+"px"
+			confetti.style.width = Math.random()*20+"px"
+			confetti.style.heigth = Math.random()*50+"px"
+
+			let r =Math.random()*225
+			let g =Math.random()*225
+			let b =Math.random()*225
+
+			confetti.style.backgroundColor="rgb("+r+","+g+","+b+")"
+
+			function moveDown(){
+			confetti.style.backgroundColor = parseInt(confetti.style.top)+Math.random()*2 + px
+			}
+		
+		}
+
+			for(let i=0; i<1001; i=i+1){
+				makeConfetti(i)
+
+
+			}
+
+	</script>
+
+</body>
+</html>

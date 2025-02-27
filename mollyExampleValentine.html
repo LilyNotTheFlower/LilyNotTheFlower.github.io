@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+		body{
+			margin:0px;
+		}
+		
+		#background
+		{
+			position:relative;
+			width:200%;
+			height:810px;
+			background-color:red;
+			animation-name:moveLeft;
+			animation-duration:20s;
+		}
+
+		.containers
+		{
+			width:100%;
+			height:100%;
+			border:2px solid black;
+			position:relative;
+			display: inline-block;
+			background-color:blue;
+			opacity:0.5;
+			z-index:0;
+			
+
+		}
+
+		@keyframes moveLeft{
+			from{
+				left:0px;
+			}
+			to{
+				left:-200%;
+			}
+		}
+
+		#background1{
+			left:0%;
+		}
+
+		#background2{
+			left:100%;
+		}
+
+
+
+		#hedgehog{
+			width:400px;
+			height:400px;
+			top:300px;
+			left:20%;
+/*			background-color: lightyellow;*/
+			position:fixed;
+			background-size:contain;
+			background-repeat: no-repeat;
+			animation-name:walk;
+			animation-duration:1s;
+			animation-iteration-count:20;
+			z-index: 10;
+
+		}
+
+		@keyframes walk{
+			from{
+				background-image:url(hedgehog1a.png);
+			}
+			to{
+				background-image:url(hedgehog2a.png);
+			}
+
+		}
+			.ground{
+			width:300%;
+			height:300px;
+			z-index:5;
+
+
+		}
+
+		@keyframes groundmove{
+			from{
+				left:0px;
+			}
+			to{
+				left:-100%;
+			}
+		}
+
+		#ground1{
+			left:0%;
+			background-color:saddlebrown;
+			position:absolute;
+			/*animation-name:groundmove;
+			animation-duration:20s;*/
+			
+		}
+		#ground2{
+			left:300%;
+			background-color:blue;
+			
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<div id="background">
+		<div class="containers" id="background1"></div>
+
+	<div class="containers" id="background2"></div>
+
+	<div class="ground" id="=ground1"></div>
+	<div class="ground" id="=ground2"></div>
+		
+	</div> 
+	<!-- end of big div -->
+	<div id="hedgehog"></div>
+	<script type="text/javascript">
+		hedgehog.addEventListener("click", function(){
+			hedgehog.backgroundImage = url(books.png)
+			
+	})
+	</script>
+</body>
+</html>

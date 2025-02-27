@@ -8,11 +8,11 @@
 		body{
 		/*	width:1000px;
 			height:1000px;*/
-			background-color:rosybrown;
+			background-color:rgb(175, 225, 175);
 			margin:0;
 		}
 		.flowers{
-			width:150px;
+			width:200px;
 			height:20px;
 			background-image:url(flower.png);
 			background-size:contain;
@@ -23,6 +23,7 @@
 			position:absolute;
 			text-align:center;
 			background-position: center;
+			margin:100px;
 
 
 		}
@@ -39,6 +40,8 @@
 	</style>
 </head>
 <body>
+
+	<div id="flower0" class="flower"></div>
 	<a href="index.html">back </a>
 <!-- <a href=""></a> -->
 <!-- <div id="background"></div> -->
@@ -53,30 +56,39 @@
 			link.appendChild(flower)
 			flower.classList.add("flowers")
 			flower.id = "flower"+input
-			if(petal>9) {
-				petal=0
+			flower.style.backgroundImage="url(flower"+input+".png)"
 
-			}
-			else{
-				petal=petal+1
-
-			}
-			flower.style.backgroundImage="url(flower"+petal+".png)"
 			flower.style.left = Math.random()*1000+"px"
 			flower.style.top = Math.random()*700+"px"
+			
+
+
+			if(input>9) {
+				input=1
+			}
+			else{
+				input=input+1
+			}
+
+			
 
 		}
 
-		for(var i=0; i<8; i=i+1){
+		for(var i=1; i<10; i=i+1){
 			makeflowers(i)
 		}
 
-		flower0.innerText= "my animation"
+		// flower0.innerText= "my animation"
 		flower1.innerText= "jumpscare"
 		flower2.innerText= "whatever"
 		flower3.innerText= "growing plant"
 		flower4.innerText= "hopping cardinal"
 		flower5.innerText= "broken colorchanging block"
+		flower6.innerText= "practicing with audio and true false"
+		flower7.innerText= "i honestly don't remember what this is supposed to be"
+		flower8.innerText= "slot machine"
+		flower9.innerText="confetti"
+		
 
 
 	</script>
