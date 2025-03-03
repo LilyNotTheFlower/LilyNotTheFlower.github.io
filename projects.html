@@ -1,66 +1,97 @@
-<!DOCTYPE html>
+c<!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
+	<title></title>
 
-		#background{
-			width:100%;
-			height:100%;
-			background-color:rosybrown;
-			margin:0px;
+	<style type="text/css">
+	
+		body{
+		/*	width:1000px;
+			height:1000px;*/
+			background-color:rgb(175, 225, 175);
+			margin:0;
 		}
-		a{
-			text-decoration: none;
-			color:black;
-		}
-		.flower{
-			width:50px;
-			height:60px;
+		.flowers{
+			width:200px;
+			height:20px;
 			background-image:url(flower.png);
 			background-size:contain;
 			background-repeat: no-repeat;
 			position:absolute;
 			text-align:center;
-			padding-top:40px;
-			padding-left:100px;
+			padding-top:80px;
 			position:absolute;
+			text-align:center;
+			background-position: center;
+			margin:100px;
+
 
 		}
 
-		#flower1{
-			left:50px;
-			top:100px;
+		a{
+			text-decoration:none;
+			color:white;
+			font-family:courier;
 		}
 
-		#flower2{
-			left:300px;
-			top:0px;
-		}
-
-		#flower3{
-			left:50px;
-			top:400px;
-		}
+		/*#flower1{
+			background-color:blue;
+		}*/
 	</style>
 </head>
 <body>
 
-	<a href="day1.html.html">
-		<div class="flower" id="flower1">#1 day 1</div>
-	</a>
+	<div id="flower0" class="flower"></div>
+	<a href="index.html">back </a>
+<!-- <a href=""></a> -->
+<!-- <div id="background"></div> -->
+	<script type="text/javascript">
+		let petal = 0;
+		function makeflowers (input){
+			let flower = document.createElement("div")
+			let link = document.createElement("a")
+			link.href ="project"+input+".html"
 
-<a href="project1.html">
-	<div class="flower" id="flower2">#2 JUMPSCARE!!</div>
-</a>
-<a href="project2.html">
-	<div class="flower" id="flower3">#3 Comet animation</div>
-</a>
-	<a href=".html">
-	<div class="flower" id="flower3">#3 Comet animation</div>
-</a>
-<a href="animation.html">
-	<div class="flower" id="flower3">#3 Comet animation</div>
-</a>
+			document.body.appendChild(link)
+			link.appendChild(flower)
+			flower.classList.add("flowers")
+			flower.id = "flower"+input
+			flower.style.backgroundImage="url(flower"+input+".png)"
+
+			flower.style.left = Math.random()*1000+"px"
+			flower.style.top = Math.random()*700+"px"
+			
+
+
+			if(input>9) {
+				input=1
+			}
+			else{
+				input=input+1
+			}
+
+			
+
+		}
+
+		for(var i=1; i<10; i=i+1){
+			makeflowers(i)
+		}
+
+		// flower0.innerText= "my animation"
+		flower1.innerText= "jumpscare"
+		flower2.innerText= "whatever"
+		flower3.innerText= "growing plant"
+		flower4.innerText= "hopping cardinal"
+		flower5.innerText= "broken colorchanging block"
+		flower6.innerText= "practicing with audio and true false"
+		flower7.innerText= "i honestly don't remember what this is supposed to be"
+		flower8.innerText= "slot machine"
+		flower9.innerText="confetti"
+		
+
+
+	</script>
 
 </body>
 </html>
