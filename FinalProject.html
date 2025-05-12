@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+		#window{
+			top:175px;
+			left:625px;
+			width:200px;
+			height:250px;
+			background-color:lightblue;
+			position: absolute;
+		}
+
+		.object{
+			background-color:darkred;
+			position: absolute;
+		}
+		#desk{
+			top:425px;
+			left:250px;
+			width:150px;
+			height:200px;
+		}
+
+		#trashcan{
+			top:590px;
+			left:190px;
+			width:75px;
+			height:75px;
+		}
+
+		#hamper{
+			top:475px;
+			left:425px;
+			width:100px;
+			height:150px;
+		}
+
+		#drawers{
+			top:450px;
+			left:575px;
+			width:300px;
+			height:200px;
+		}
+
+		#plant{
+			top:350px;
+			left:650px;
+			width:75px;
+			height:100px;
+		}
+
+		#bed{
+			top:500px;
+			left:1000px;
+			width:200px;
+			height:125px;
+		}
+
+		#table{
+			top:525px;
+			left:915px;
+			width:100px;
+			height:100px;
+		}
+
+		.wall{
+			position: absolute;
+
+		}
+/*ceiling ends at 100px
+left wall ends at 200px
+floor starts at 625px
+right wall starts at 1200px*/
+
+		#leftwall{
+			top:0px;
+			left:0px;
+			width:250px;
+			height:815px;
+			background-color: seagreen;
+		}
+
+		#rightwall{
+			top:0px;
+			left:1200px;
+			width:250px;
+			height:815px;
+			background-color: seagreen;
+		}
+
+		#ceiling{
+			top:0px;
+			left:0px;
+			width:1500px;
+			height:150px;
+			background-color:darkgreen;
+		}
+
+		#floor{
+			top:625px;
+			left:0px;
+			width:1500px;
+			height:200px;
+			background-color:darkgreen;
+		}
+
+		#backwall{
+			top:150px;
+			left:250px;
+			width:950px;
+			height:475px;
+
+			background-color: limegreen;
+		}
+
+		#calender{
+			top:300px;
+			left:500px;
+			width:80px;
+			height:80px;
+			background-color:orange;
+			position:absolute;
+			padding:10px;
+			
+				}
+
+		#calenderexit{
+			background-color:orangered;
+			position:absolute;
+			border-radius:10px;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+
+<div id = "leftwall" class="wall"></div>
+<div id = "rightwall" class="wall"></div>
+<div id = "floor" class="wall"></div>
+<div id = "ceiling" class="wall"></div>
+<div id = "backwall" class="wall"></div>
+
+<div id = "window"></div>
+
+<div id="desk" class="object"></div>
+<div id = "trashcan" class="object"></div>
+<div id = "hamper" class="object"></div>
+<div id = "drawers" class="object"></div>
+<div id = "plant" class="object"></div>
+<div id = "bed" class="object"></div>
+<div id = "table" class="object"></div>
+
+<div id= "calender"></div>
+<div id= "calenderexit"></div>
+	
+	<script type="text/javascript">
+
+		let deskArray=[];
+		let tableArray=[];
+		let date = new Date()
+
+
+		console.log(date.getTime())
+
+		let score=0
+		desk.addEventListener("click", function(){
+			alert("Great job doing your work!")
+			desk.style.backgroundColor="purple"
+			score = score+1
+
+			deskArray.push(date)
+			console.log(deskArray)
+
+			if (score==7){
+			alert("Wow! Congrats on doing everything you need to! Have a good day/night!")
+			score=0
+
+		}
+
+
+
+		})
+
+		trashcan.addEventListener("click", function(){
+			alert("Great job emptying the trash!")
+			trashcan.style.backgroundColor="purple"
+			score = score+1
+
+			if (score==7){
+			alert("Wow! Congrats on doing everything you need to! Have a good day/night!")
+			score=0
+		}
+
+		})
+
+		hamper.addEventListener("click", function(){
+			alert("Great job washing your clothes!")
+			hamper.style.backgroundColor="purple"
+			score = score+1
+
+			if (score==7){
+			alert("Wow! Congrats on doing everything you need to! Have a good day/night!")
+			score=0
+		}
+
+		})
+
+		drawers.addEventListener("click", function(){
+			alert("Great job putting away clothes!")
+			drawers.style.backgroundColor="purple"
+			score = score+1
+
+			if (score==7){
+			alert("Wow! Congrats on doing everything you need to! Have a good day/night!")
+			score=0
+		}
+
+		})
+
+		plant.addEventListener("click", function(){
+			alert("Great job watering the plant!")
+			plant.style.backgroundColor="purple"
+			score = score+1
+
+			if (score==7){
+			alert("Wow! Congrats on doing everything you need to! Have a good day/night!")
+			score=0
+		}
+
+		})
+
+		bed.addEventListener("click", function(){
+			alert("Great job making your bed!")
+			bed.style.backgroundColor="purple"
+			score = score+1
+
+			if (score==7){
+			alert("Wow! Congrats on doing everything you need to! Have a good day/night!")
+			score=0
+		}
+
+		})
+
+		table.addEventListener("click", function(){
+			alert("Great job cleaning!")
+			table.style.backgroundColor="purple"
+			score = score+1
+			console.log(score )
+
+			if (score==7){
+			alert("Wow! Congrats on doing everything you need to! Have a good day/night!")
+			score=0
+
+		}
+
+		})
+		
+		
+		calender.addEventListener("click", function(){
+			calender.style.width="550px"
+			calender.style.height="550px"
+			// calender.style.left="0px"
+			calender.style.top="125px"
+			// calender.style.display="center"
+			calender.style.borderRadius="5%"
+
+			let score1=parseInt(score)
+			let score2=7-parseInt(score)
+
+			calender.innerText="testing testing testing " + score
+			
+			calender.innerText= "You have done " + score1 +" task(s). You have " + score2 + " tasks left. You got this!"
+			calenderexit.style.width="100px"
+			calenderexit.style.height="50px"
+			calenderexit.style.top="600px"
+			calenderexit.style.left="925px"
+
+
+		})
+
+		calenderexit.addEventListener("click",function(){
+			calender.style.width="100px"
+			calender.style.height="100px"
+			calender.style.top="300px"
+			calenderexit.style.width="0px"
+			calender.innerText=""
+
+		})
+
+
+	
+
+
+
+
+	</script>
+
+</body>
+</html>

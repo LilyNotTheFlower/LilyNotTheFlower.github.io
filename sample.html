@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		let counter=11;
+
+		function countdown(){
+			counter=counter-1
+			document.body.innerText=counter
+		}
+
+		document.addEventListener("click", function(){
+					setInterval(countdown, 1000)
+
+		})
+	</script>
+
+</body>
+</html>
