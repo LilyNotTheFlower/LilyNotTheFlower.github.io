@@ -34,19 +34,40 @@
 			font-family:courier;
 		}
 
+		#finalproject{
+			width:200px;
+			height:200px;
+			top:300px;
+			left:600px;
+/*			margin: auto;*/
+			position:absolute;
+			border-radius:50%;
+			background-image:url(flower1.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align:center;
+
+		}
+		
 		/*#flower1{
 			background-color:blue;
 		}*/
 	</style>
 </head>
 <body>
-
+	<a href="FinalProject.html">
+<div id="finalproject">Final Project!</div>
+</a>
 	<div id="flower0" class="flower"></div>
+	
 	<a href="index.html">back </a>
+	
 <!-- <a href=""></a> -->
 <!-- <div id="background"></div> -->
 	<script type="text/javascript">
 		let petal = 0;
+		
 		function makeflowers (input){
 			let flower = document.createElement("div")
 			let link = document.createElement("a")
